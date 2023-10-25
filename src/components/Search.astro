@@ -1,0 +1,75 @@
+---
+
+---
+
+<section>
+  <div class="section1-container">
+    <nav>
+      <h1>Duck Trip</h1>
+      <div class="nav-line"></div>
+      <div class="nav-buttons">
+        <a href="#About">About</a>
+        <a href="#Hotels">Hoteles</a>
+        <a href="#Flights">Vuelos</a>
+      </div>
+    </nav>
+    <p class="wellcome-text">Encuentra tu destino</p>
+    <div class="search-input-container">
+      <div class="buttons-container">
+        <button>
+          <p>Vuelos</p>
+          <img
+            class="buttons-container-icons"
+            src="icons/plane_icon.png"
+            alt="Flights"
+          />
+        </button>
+        <button>
+          <p>Hoteles</p>
+          <img
+            class="buttons-container-icons"
+            src="icons/hotel_icon.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="search-input">
+        <input
+          class="box-text"
+          type="text"
+          placeholder="¿A donde quieres viajar?"
+          id="googleButton"
+        />
+        <button class="search-button">
+          <img src="icons/mag_icon.png" alt="Search" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module">
+  // la funcion recoge lo que esta escrito en el id="googleButton" del html con .value
+  // si se ha escrito algo entonces abrira una pestaña nueva
+
+  const searchInGoogle = () => {
+    const query = document.getElementById("googleButton").value;
+
+    if (query) {
+      window.open(`https://www.google.com/search?q=${query}`);
+    }
+  };
+  document
+    .querySelector(".search-button")
+    .addEventListener("click", searchInGoogle);
+  // las ultimas lineas sirven para buscar en el html la clase (".search-button")
+  // luego si se hace click en esa clase se llamara la funcion searchInGoogle
+
+  document
+    .getElementById("googleButton")
+    .addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        searchInGoogle();
+      }
+    });
+</script>

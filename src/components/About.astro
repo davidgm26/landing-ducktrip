@@ -1,0 +1,68 @@
+---
+
+---
+
+<section id="About">
+  <div class="title-block">
+    <h1 class="title">¿Qué ofrecemos?</h1>
+    <hr class="section2-tittle-line" />
+  </div>
+  <div class="content">
+    <div class="information">
+      <h2>Te ayudamos a elegir tu destino.</h2>
+      <p>
+        En DuckTrip, hacemos que viajar sea sencillo y emocionante. Te ayudamos
+        a encontrar tu destino perfecto, reservar vuelos, alojamiento, y te
+        proporcionamos información meteorológica actualizada para que disfrutes
+        al máximo de tus aventuras.<br /><br />
+         ¡Explora, reserva y viaja sin complicaciones con nosotros!
+      </p>
+    </div>
+    <div class="photo">
+      <div class="right-side">
+        <div class="photo-element photo-info">
+          <h3>Destinos</h3>
+          <p>Elige cualquier país y descubre tu siguiente viaje.</p>
+        </div>
+        <div class="photo-element photo-info">
+          <h3>Hoteles</h3>
+          <p>La estancia ideal para descansar.</p>
+        </div>
+      </div>
+      <div class="left-side">
+        <div class="photo3 photo-info">
+          <h3>Vuelos</h3>
+          <p>Compara la mejor oferta para tu destino.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module">
+  // Observa el elemento que deseas animar
+  // Seleccionamos los div que tienen la clase .information y .photo
+  const informationElement = document.querySelector(".information");
+  const photoElement = document.querySelector(".photo");
+
+  // declaramos la funcion observer:
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      // "Si .information.esInterceptado, es decir, esta en la vista hace lo siguiente"
+      if (entry.isIntersecting) {
+        // Cuando el elemento es visible en la página, activa la animación
+        informationElement.style.animationPlayState = "running";
+        photoElement.style.animationPlayState = "running";
+        // Cambia el estilo 'paused' que ya tiene .information y .photo en el css a 'running'
+        // Detén la observación después de activar la animación
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  // Comienza a observar el elemento
+  // Aqui le pasamos como parametros los dos div que guardamos anteriormente
+  observer.observe(informationElement);
+  observer.observe(photoElement);
+</script>
