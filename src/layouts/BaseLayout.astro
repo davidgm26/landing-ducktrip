@@ -145,44 +145,57 @@ const title = "Ducktrip";
     width: 100%;
   }
 
+  .section1-container {
+    background: url("/images/section1_image1.webp");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 8rem;
+  }
+
   /* Nav style */
 
   nav {
     width: 100%;
-    height: 5vw;
+    padding: 0.5rem 2rem;
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
     background-color: white;
     filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
+    gap: 2rem;
+    align-items: center;
   }
 
-  nav h1 {
-    color: var(--blueduck);
-    text-shadow: 0 8px 8px rgb(0 0 0 / 25%);
-    font-style: normal;
-    margin-block: auto;
-    font-size: 2.4vw;
+  .logo {
+    height: 4rem;
   }
 
   .nav-line {
-    margin-block: auto;
-    height: 2.5vw;
+    height: 3rem;
     border: solid 1px var(--blueduck);
   }
 
   .nav-buttons {
     display: flex;
-    width: 60%;
-    justify-content: space-evenly;
-    align-content: center;
+    width: 100%;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
     flex-wrap: wrap;
   }
 
   .nav-buttons a {
     color: var(--blueduck);
     cursor: pointer;
-    font-size: 2vw;
+    font-size: 1.5rem;
     text-decoration: none;
 
   }
@@ -196,57 +209,51 @@ const title = "Ducktrip";
 
   /* Middle wellcome text */
   .wellcome-text {
-    margin-inline: auto;
-    margin-bottom: 0;
+    text-align: center;
     color: white;
-    font-size: 3vw;
+    font-size: var(--tittle-size);
     text-shadow: 8px 8px 8px rgb(0 0 0 / 75%);
   }
 
   /* search input styles */
 
   .search-input-container {
-    margin-inline: auto;
-    width: 45vw;
-    height: 15vw;
+    max-width: 600px;
     background-color: transparent;
     filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
-    padding-top: 4vw;
+    padding: 2rem 2rem 0 2rem;
+    width: 100%;
+    margin-bottom: -2rem;
   }
 
   .box-text {
-    font-size: 1.5vw;
+    font-size: 1rem;
     color: white;
   }
 
   .buttons-container {
-    margin-top: -3vh;
     width: 30%;
-    height: 20%;
     background-color: white;
-    border-radius: 1.25vw 1.25vw 0 0;
+    border-radius: 1rem 1rem 0 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: center;
-    padding-block: 2vw;
   }
 
   .buttons-container button {
-    height: 3vw;
-    width: 7.3vw;
-    border-radius: 1.875vh;
+    border-radius: 1rem;
     background: white;
     border: 0 solid var(--blueduck);
-    padding: 0.65vw;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .buttons-container button p {
-    font-size: 1.5vw;
-    padding-right: 0.3vw;
+    font-size: 1rem;
+    padding-right: 0.5rem;
   }
 
   .buttons-container button:hover {
@@ -254,19 +261,17 @@ const title = "Ducktrip";
   }
 
   .buttons-container-icons {
-    width: 1.5vw;
+    width: 1rem;
   }
 
   .search-input {
     width: 100%;
-    height: 85%;
-    border-radius: 0 1.25vh 1.25vh;
+    border-radius: 0 1rem 1rem;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     background-color: white;
-    padding-block: 6vw;
+    padding: 2rem;
+    gap: 1rem
   }
 
   .search-input * {
@@ -274,19 +279,14 @@ const title = "Ducktrip";
   }
 
   .search-input input {
-    width: 30vw;
     background-color: rgb(62 134 245 / 50%);
     border: 5px solid var(--blueduck);
   }
 
   .search-button {
-    padding: 0.5vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 3rem;
+    padding: 0.5rem;
     background-color: rgb(62 134 245 / 50%);
     border: 5px solid var(--blueduck);
-    margin-left: 2vw;
   }
 
   .search-button:hover {
@@ -463,22 +463,7 @@ const title = "Ducktrip";
     font-size: 0.6rem;
   }
 
-  .section1-container {
-    background: url("/images/section1_image1.webp");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 40vw;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-content: center;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 10vw;
-  }
+
 
   .section3 {
     padding: 4rem 2rem;
