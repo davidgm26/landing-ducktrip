@@ -136,7 +136,7 @@ const title = "Ducktrip";
       width: 100%;
     }
 
-    .search-input-container {
+    .link-to-app-container {
       padding-top: -15vh;
     }
   }
@@ -234,7 +234,7 @@ const title = "Ducktrip";
 
   /* search input styles */
 
-  .search-input-container {
+  .link-to-app-container {
     max-width: 600px;
     background-color: transparent;
     filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
@@ -248,77 +248,61 @@ const title = "Ducktrip";
     color: white;
   }
 
-  .buttons-container {
-    width: 30%;
-    background-color: white;
-    border-radius: 1rem 1rem 0 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: center;
-  }
-
-  .buttons-container button {
-    border-radius: 1rem;
-    background: white;
-    border: 0 solid var(--blueduck);
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .buttons-container button p {
-    font-size: 1rem;
-    padding-right: 0.5rem;
-  }
-
-  .buttons-container button:hover {
-    background: rgb(62 134 245 / 50%);
-  }
-
-  .buttons-container-icons {
-    width: 1rem;
-  }
-
-  .search-input {
+  .link-to-app {
     width: 100%;
-    border-radius: 0 1rem 1rem;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
-    padding: 2rem;
+    padding: 1rem 2rem;
     gap: 1rem
   }
 
-  .search-input * {
+  .link-to-app * {
     border-radius: 1.25rem;
   }
 
-  .search-input input {
-    background-color: rgb(62 134 245 / 50%);
-    border: 5px solid var(--blueduck);
-  }
+  .link-to-app-title {
+  color: var(--blueduck);
+  text-shadow: 0px 4px 4px #00000040;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
-  .search-button {
-    padding: 0.5rem;
-    background-color: rgb(62 134 245 / 50%);
-    border: 5px solid var(--blueduck);
-  }
+.link-to-app-text {
+  color: var(--blueduck);
+  text-shadow: 0px 4px 4px #00000040;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
-  .search-button:hover {
-    cursor: pointer;
-    background-color: rgb(62 134 245 / 70%);
-  }
+.link-to-app-link {
+  border-radius: 10px;
+  background: var(--blueduck);
+  box-shadow: 4px 4px 25px var(--blueduck);
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  width: 8rem;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  transition: transform 0.3s;
+}
 
-  .search-button:active {
-    cursor: pointer;
-    background-color: rgb(62 134 245 / 50%);
-  }
-
-  .search-button img {
-    width: 2vw;
-  }
+.link-to-app-link:hover {
+  transform: scale(1.1);
+}
 
   /* end of section1 */
 
@@ -333,7 +317,6 @@ const title = "Ducktrip";
     align-items: center;
     justify-content: center;
     text-align: center;
-    
   }
 
   /* Section2 styles */

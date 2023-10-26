@@ -14,54 +14,17 @@
       </div>
     </nav>
     <h1 class="wellcome-text">Encuentra tu destino</h1>
-    <div class="search-input-container">
-      <div class="buttons-container">
-        <button>
-          <p>Vuelos</p>
-          <img
-            class="buttons-container-icons"
-            src="icons/plane_icon.png"
-            alt="Flights"
-          />
-        </button>
-      </div>
-      <div class="search-input">
-        <input
-          class="box-text"
-          type="text"
-          placeholder="¿A donde quieres viajar?"
-          id="googleButton"
-        />
-        <button class="search-button">
-          <img src="icons/mag_icon.png" alt="Search" />
-        </button>
+    <div class="link-to-app-container">
+      <div class="link-to-app">
+        <h2 class="link-to-app-title">LOS MEJORES OPCIONES PARA VIAJAR</h2>
+        <p class="link-to-app-text">
+          ¿Estás planificando tu próximo viaje? Te ofrecemos los mejores vuelos
+        </p>
+        <a class="link-to-app-link" href="https://app.ducktrip.today/">ACCEDE A NUESTRA PÁGINA</a>
       </div>
     </div>
   </div>
 </section>
 
-<script type="module">
-  // la funcion recoge lo que esta escrito en el id="googleButton" del html con .value
-  // si se ha escrito algo entonces abrira una pestaña nueva
-
-  const searchInGoogle = () => {
-    const query = document.getElementById("googleButton").value;
-
-    if (query) {
-      window.open(`https://www.google.com/search?q=${query}`);
-    }
-  };
-  document
-    .querySelector(".search-button")
-    .addEventListener("click", searchInGoogle);
-  // las ultimas lineas sirven para buscar en el html la clase (".search-button")
-  // luego si se hace click en esa clase se llamara la funcion searchInGoogle
-
-  document
-    .getElementById("googleButton")
-    .addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        searchInGoogle();
-      }
-    });
+<script>
 </script>
